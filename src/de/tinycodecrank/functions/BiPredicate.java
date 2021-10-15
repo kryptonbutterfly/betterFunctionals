@@ -3,6 +3,7 @@ package de.tinycodecrank.functions;
 import de.tinycodecrank.functions.applicable.ApplicableLeft;
 import de.tinycodecrank.functions.applicable.ApplicableRight;
 
+@FunctionalInterface
 public interface BiPredicate<T, U> extends java.util.function.BiPredicate<T, U>, ApplicableRight<U, Predicate<T>>, ApplicableLeft<T, Predicate<U>>
 {
 	@Override
