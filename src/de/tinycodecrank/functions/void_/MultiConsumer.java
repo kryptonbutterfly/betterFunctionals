@@ -1,4 +1,4 @@
-package de.tinycodecrank.functions;
+package de.tinycodecrank.functions.void_;
 
 import java.util.Arrays;
 import java.util.Objects;

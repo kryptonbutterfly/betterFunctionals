@@ -1,21 +1,23 @@
 package de.tinycodecrank.functions.float_;
 
+import java.util.function.IntSupplier;
+
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableLeft;
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableRight;
 
 @FunctionalInterface
-public interface FloatConsumer extends FloatApplicableLeft<Runnable>, FloatApplicableRight<Runnable>
+public interface FloatToIntFunction extends FloatApplicableLeft<IntSupplier>, FloatApplicableRight<IntSupplier>
 {
-	void apply(float value);
+	int apply(float a);
 	
 	@Override
-	default Runnable aptFirst(float a)
+	default IntSupplier aptFirst(float a)
 	{
 		return aptLast(a);
 	}
 	
 	@Override
-	default Runnable aptLast(float z)
+	default IntSupplier aptLast(float z)
 	{
 		return () -> apply(z);
 	}

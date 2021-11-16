@@ -3,9 +3,9 @@ package de.tinycodecrank.functions.int_;
 import java.util.Arrays;
 import java.util.Objects;
 
-import de.tinycodecrank.functions.MultiConsumer;
 import de.tinycodecrank.functions.applicable.ApplicableRight;
 import de.tinycodecrank.functions.int_.applicable.IntApplicableLeft;
+import de.tinycodecrank.functions.void_.MultiConsumer;
 
 @FunctionalInterface
 public interface IntMultiConsumer<T> extends IntApplicableLeft<MultiConsumer<T>>, ApplicableRight<T, IntMultiConsumer<T>>

@@ -5,6 +5,7 @@ import java.util.function.IntConsumer;
 import de.tinycodecrank.functions.int_.applicable.IntApplicableLeft;
 import de.tinycodecrank.functions.int_.applicable.IntApplicableRight;
 
+@FunctionalInterface
 public interface IntBiConsumer extends IntApplicableRight<IntConsumer>, IntApplicableLeft<IntConsumer>
 {
 	void apply(int a, int b);

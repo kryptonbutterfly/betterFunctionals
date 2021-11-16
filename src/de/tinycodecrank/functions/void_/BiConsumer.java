@@ -1,4 +1,4 @@
-package de.tinycodecrank.functions;
+package de.tinycodecrank.functions.void_;
 
 import de.tinycodecrank.functions.applicable.ApplicableLeft;
 import de.tinycodecrank.functions.applicable.ApplicableRight;

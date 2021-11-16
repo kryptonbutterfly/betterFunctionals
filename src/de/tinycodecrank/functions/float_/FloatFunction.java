@@ -1,42 +1,24 @@
 package de.tinycodecrank.functions.float_;
 
-import java.util.Objects;
+import java.util.function.Supplier;
 
-import de.tinycodecrank.functions.ToFloatFunction;
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableLeft;
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableRight;
 
 @FunctionalInterface
-public interface FloatFunction extends FloatApplicableLeft<FloatSupplier>, FloatApplicableRight<FloatSupplier>
+public interface FloatFunction<R> extends FloatApplicableLeft<Supplier<R>>, FloatApplicableRight<Supplier<R>>
 {
-	float apply(float value);
-	
-	default <V> ToFloatFunction<V> compose(ToFloatFunction<? super V> before)
-	{
-		Objects.requireNonNull(before);
-		return (V v) -> apply(before.apply(v));
-	}
-	
-	default FloatFunction andThen(FloatFunction after)
-	{
-		Objects.requireNonNull(after);
-		return (float value) -> after.apply(apply(value));
-	}
-	
-	static FloatFunction indetity()
-	{
-		return f -> f;
-	}
+	R apply(float a);
 	
 	@Override
-	default FloatSupplier aptFirst(float a)
+	default Supplier<R> aptFirst(float a)
 	{
 		return () -> apply(a);
 	}
 	
 	@Override
-	default FloatSupplier aptLast(int z)
+	default Supplier<R> aptLast(float b)
 	{
-		return () -> apply(z);
+		return () -> apply(b);
 	}
 }

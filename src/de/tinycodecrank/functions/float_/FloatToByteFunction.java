@@ -1,21 +1,22 @@
 package de.tinycodecrank.functions.float_;
 
+import de.tinycodecrank.functions.byte_.ByteSupplier;
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableLeft;
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableRight;
 
 @FunctionalInterface
-public interface FloatConsumer extends FloatApplicableLeft<Runnable>, FloatApplicableRight<Runnable>
+public interface FloatToByteFunction extends FloatApplicableLeft<ByteSupplier>, FloatApplicableRight<ByteSupplier>
 {
-	void apply(float value);
-	
+	byte apply(float a);
+
 	@Override
-	default Runnable aptFirst(float a)
+	default ByteSupplier aptFirst(float a)
 	{
 		return aptLast(a);
 	}
 	
 	@Override
-	default Runnable aptLast(float z)
+	default ByteSupplier aptLast(float z)
 	{
 		return () -> apply(z);
 	}

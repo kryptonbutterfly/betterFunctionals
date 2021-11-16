@@ -1,21 +1,23 @@
 package de.tinycodecrank.functions.float_;
 
+import java.util.function.LongSupplier;
+
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableLeft;
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableRight;
 
 @FunctionalInterface
-public interface FloatConsumer extends FloatApplicableLeft<Runnable>, FloatApplicableRight<Runnable>
+public interface FloatToLongFunction extends FloatApplicableLeft<LongSupplier>, FloatApplicableRight<LongSupplier>
 {
-	void apply(float value);
+	long apply(float a);
 	
 	@Override
-	default Runnable aptFirst(float a)
+	default LongSupplier aptFirst(float a)
 	{
 		return aptLast(a);
 	}
 	
 	@Override
-	default Runnable aptLast(float z)
+	default LongSupplier aptLast(float z)
 	{
 		return () -> apply(z);
 	}
