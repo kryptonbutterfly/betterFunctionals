@@ -5,7 +5,7 @@ import de.tinycodecrank.functions.char_.CharConsumer;
 import de.tinycodecrank.functions.char_.applicable.CharApplicableRight;
 
 @FunctionalInterface
-public interface ObjCharConsumer<A> extends ApplicableLeft<A, CharConsumer>, CharApplicableRight<Consumer<A>>
+public interface ObjCharConsumer<A> extends ApplicableLeft<A, CharConsumer>, CharApplicableRight<Consumer_<A>>
 {
 	void accept(A a, char b);
 	
@@ -16,7 +16,7 @@ public interface ObjCharConsumer<A> extends ApplicableLeft<A, CharConsumer>, Cha
 	}
 	
 	@Override
-	default Consumer<A> aptLast(char b)
+	default Consumer_<A> aptLast(char b)
 	{
 		return a -> accept(a, b);
 	}

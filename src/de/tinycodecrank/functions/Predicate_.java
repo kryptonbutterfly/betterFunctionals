@@ -7,24 +7,24 @@ import de.tinycodecrank.functions.applicable.ApplicableLeft;
 import de.tinycodecrank.functions.applicable.ApplicableRight;
 
 @FunctionalInterface
-public interface Predicate<T> extends java.util.function.Predicate<T>, ApplicableRight<T, BooleanSupplier>, ApplicableLeft<T, BooleanSupplier>
+public interface Predicate_<T> extends java.util.function.Predicate<T>, ApplicableRight<T, BooleanSupplier>, ApplicableLeft<T, BooleanSupplier>
 {
 	@Override
-	default Predicate<T> and(java.util.function.Predicate<? super T> other)
+	default Predicate_<T> and(java.util.function.Predicate<? super T> other)
 	{
 		Objects.requireNonNull(other);
 		return t -> test(t) && other.test(t);
 	}
 	
 	@Override
-	default Predicate<T> or(java.util.function.Predicate<? super T> other)
+	default Predicate_<T> or(java.util.function.Predicate<? super T> other)
 	{
 		Objects.requireNonNull(other);
 		return t -> test(t) || other.test(t);
 	}
 	
 	@Override
-	default Predicate<T> negate()
+	default Predicate_<T> negate()
 	{
 		return t -> !test(t);
 	}

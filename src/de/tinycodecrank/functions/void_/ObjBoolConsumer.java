@@ -5,7 +5,7 @@ import de.tinycodecrank.functions.bool_.BoolConsumer;
 import de.tinycodecrank.functions.bool_.applicable.BoolApplicableRight;
 
 @FunctionalInterface
-public interface ObjBoolConsumer<A> extends ApplicableLeft<A, BoolConsumer>, BoolApplicableRight<Consumer<A>>
+public interface ObjBoolConsumer<A> extends ApplicableLeft<A, BoolConsumer>, BoolApplicableRight<Consumer_<A>>
 {
 	void accept(A a, boolean b);
 	
@@ -16,7 +16,7 @@ public interface ObjBoolConsumer<A> extends ApplicableLeft<A, BoolConsumer>, Boo
 	}
 	
 	@Override
-	default Consumer<A> aptLast(boolean b)
+	default Consumer_<A> aptLast(boolean b)
 	{
 		return a -> accept(a, b);
 	}

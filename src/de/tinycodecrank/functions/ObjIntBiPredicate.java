@@ -5,7 +5,7 @@ import java.util.function.IntPredicate;
 import de.tinycodecrank.functions.applicable.ApplicableLeft;
 import de.tinycodecrank.functions.int_.applicable.IntApplicableRight;
 
-public interface ObjIntBiPredicate<A> extends ApplicableLeft<A, IntPredicate>, IntApplicableRight<Predicate<A>>
+public interface ObjIntBiPredicate<A> extends ApplicableLeft<A, IntPredicate>, IntApplicableRight<Predicate_<A>>
 {
 	boolean test(A a, int b);
 	
@@ -16,7 +16,7 @@ public interface ObjIntBiPredicate<A> extends ApplicableLeft<A, IntPredicate>, I
 	}
 	
 	@Override
-	default Predicate<A> aptLast(int b)
+	default Predicate_<A> aptLast(int b)
 	{
 		return a -> test(a, b);
 	}

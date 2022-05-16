@@ -5,7 +5,7 @@ import de.tinycodecrank.functions.float_.FloatConsumer;
 import de.tinycodecrank.functions.float_.applicable.FloatApplicableRight;
 
 @FunctionalInterface
-public interface ObjFloatConsumer<A> extends ApplicableLeft<A, FloatConsumer>, FloatApplicableRight<Consumer<A>>
+public interface ObjFloatConsumer<A> extends ApplicableLeft<A, FloatConsumer>, FloatApplicableRight<Consumer_<A>>
 {
 	void accept(A a, float b);
 	
@@ -16,7 +16,7 @@ public interface ObjFloatConsumer<A> extends ApplicableLeft<A, FloatConsumer>, F
 	}
 	
 	@Override
-	default Consumer<A> aptLast(float b)
+	default Consumer_<A> aptLast(float b)
 	{
 		return a -> accept(a, b);
 	}

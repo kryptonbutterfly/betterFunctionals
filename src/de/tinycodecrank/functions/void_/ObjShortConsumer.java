@@ -5,7 +5,7 @@ import de.tinycodecrank.functions.short_.ShortConsumer;
 import de.tinycodecrank.functions.short_.applicable.ShortApplicableRight;
 
 @FunctionalInterface
-public interface ObjShortConsumer<A> extends ApplicableLeft<A, ShortConsumer>, ShortApplicableRight<Consumer<A>>
+public interface ObjShortConsumer<A> extends ApplicableLeft<A, ShortConsumer>, ShortApplicableRight<Consumer_<A>>
 {
 	void accept(A a, short b);
 	
@@ -16,7 +16,7 @@ public interface ObjShortConsumer<A> extends ApplicableLeft<A, ShortConsumer>, S
 	}
 	
 	@Override
-	default Consumer<A> aptLast(short b)
+	default Consumer_<A> aptLast(short b)
 	{
 		return a -> accept(a, b);
 	}

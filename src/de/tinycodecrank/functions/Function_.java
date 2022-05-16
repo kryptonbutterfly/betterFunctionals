@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 import de.tinycodecrank.functions.applicable.ApplicableLeft;
 import de.tinycodecrank.functions.applicable.ApplicableRight;
 
-public interface Function<T, R> extends java.util.function.Function<T, R>, ApplicableRight<T, Supplier<R>>, ApplicableLeft<T, Supplier<R>>
+public interface Function_<T, R> extends java.util.function.Function<T, R>, ApplicableRight<T, Supplier<R>>, ApplicableLeft<T, Supplier<R>>
 {
 	@Override
 	default Supplier<R> aptFirst(T t)

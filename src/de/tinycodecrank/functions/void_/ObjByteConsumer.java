@@ -5,7 +5,7 @@ import de.tinycodecrank.functions.byte_.ByteConsumer;
 import de.tinycodecrank.functions.byte_.applicable.ByteApplicableRight;
 
 @FunctionalInterface
-public interface ObjByteConsumer<A> extends ApplicableLeft<A, ByteConsumer>, ByteApplicableRight<Consumer<A>>
+public interface ObjByteConsumer<A> extends ApplicableLeft<A, ByteConsumer>, ByteApplicableRight<Consumer_<A>>
 {
 	void accept(A a, byte b);
 	
@@ -16,7 +16,7 @@ public interface ObjByteConsumer<A> extends ApplicableLeft<A, ByteConsumer>, Byt
 	}
 	
 	@Override
-	default Consumer<A> aptLast(byte b)
+	default Consumer_<A> aptLast(byte b)
 	{
 		return a -> accept(a, b);
 	}
