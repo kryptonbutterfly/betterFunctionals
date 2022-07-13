@@ -1,4 +1,4 @@
-module Functional
+module de.tinycodecrank.Functional
 {
 	exports de.tinycodecrank.functions.float_.applicable;
 	exports de.tinycodecrank.functions.char_.applicable;
