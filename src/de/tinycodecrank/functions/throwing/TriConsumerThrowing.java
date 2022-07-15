@@ -3,6 +3,7 @@ package de.tinycodecrank.functions.throwing;
 import de.tinycodecrank.functions.applicable.ApplicableLeft;
 import de.tinycodecrank.functions.applicable.ApplicableRight;
 
+@FunctionalInterface
 public interface TriConsumerThrowing<U, V, W, E extends Throwable> extends ApplicableRight<W, BiConsumerThrowing<U, V, E>>, ApplicableLeft<U, BiConsumerThrowing<V, W, E>>
 {
 	void accept(U u, V v, W w) throws E;

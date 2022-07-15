@@ -1,6 +1,5 @@
-package de.tinycodecrank.functions.int_;
+package de.tinycodecrank.functions.long_;
 
-import de.tinycodecrank.functions.long_.LongToShortFunction;
 import de.tinycodecrank.functions.long_.applicable.LongApplicableLeft;
 import de.tinycodecrank.functions.long_.applicable.LongApplicableRight;
 

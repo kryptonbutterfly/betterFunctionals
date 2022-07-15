@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import de.tinycodecrank.functions.applicable.ApplicableLeft;
 import de.tinycodecrank.functions.applicable.ApplicableRight;
 
+@FunctionalInterface
 public interface Function_<T, R> extends java.util.function.Function<T, R>, ApplicableRight<T, Supplier<R>>, ApplicableLeft<T, Supplier<R>>
 {
 	@Override

@@ -3,6 +3,7 @@ package de.tinycodecrank.functions.int_;
 import de.tinycodecrank.functions.int_.applicable.IntApplicableLeft;
 import de.tinycodecrank.functions.int_.applicable.IntApplicableRight;
 
+@FunctionalInterface
 public interface IntQuadConsumer extends IntApplicableRight<IntTriConsumer>, IntApplicableLeft<IntTriConsumer>
 {
 	void apply(int a, int b, int c, int d);
