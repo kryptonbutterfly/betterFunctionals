@@ -19,4 +19,15 @@ public interface IntTriConsumer extends IntApplicableRight<IntBiConsumer>, IntAp
 	{
 		return (int a, int b) -> apply(a, b, c);
 	}
+	
+	/**
+	 * @return a Function that accepts three arguments and does nothing
+	 */
+	public static IntTriConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final IntTriConsumer SINK = (a, b, c) ->
+	{};
 }

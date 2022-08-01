@@ -19,4 +19,16 @@ public interface VarargsBiConsumer<T, U> extends ApplicableLeft<T, MultiConsumer
 	{
 		return t -> accept(t, u);
 	}
+	
+	/**
+	 * @return a Function that accepts at least one argument and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T, U> VarargsBiConsumer<T, U> sink()
+	{
+		return (VarargsBiConsumer<T, U>) SINK;
+	}
+	
+	static final VarargsBiConsumer<?, ?> SINK = (a, b) ->
+	{};
 }

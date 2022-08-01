@@ -19,4 +19,15 @@ public interface LongBiConsumer extends LongApplicableLeft<LongConsumer>, LongAp
 	{
 		return a -> accept(a, z);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	public static LongBiConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final LongBiConsumer SINK = (a, b) ->
+	{};
 }

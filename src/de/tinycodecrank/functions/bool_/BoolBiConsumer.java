@@ -19,4 +19,15 @@ public interface BoolBiConsumer extends BoolApplicableLeft<BoolConsumer>, BoolAp
 	{
 		return a -> accept(a, z);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	public static BoolBiConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final BoolBiConsumer SINK = (a, b) ->
+	{};
 }

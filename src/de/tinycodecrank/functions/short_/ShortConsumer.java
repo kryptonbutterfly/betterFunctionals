@@ -19,4 +19,15 @@ public interface ShortConsumer extends ShortApplicableRight<Runnable>, ShortAppl
 	{
 		return () -> accept(z);
 	}
+	
+	/**
+	 * @return a Function that accepts an argument and does nothing
+	 */
+	public static ShortConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final ShortConsumer SINK = a ->
+	{};
 }

@@ -20,4 +20,16 @@ public interface ObjByteConsumer<A> extends ApplicableLeft<A, ByteConsumer>, Byt
 	{
 		return a -> accept(a, b);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> ObjByteConsumer<T> sink()
+	{
+		return (ObjByteConsumer<T>) SINK;
+	}
+	
+	static final ObjByteConsumer<?> SINK = (a, b) ->
+	{};
 }

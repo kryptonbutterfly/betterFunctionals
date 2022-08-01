@@ -21,4 +21,14 @@ public interface LongUnaryOperator extends LongApplicableLeft<LongSupplier>, Lon
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	public static LongUnaryOperator identity()
+	{
+		return IDENTITY;
+	}
+	
+	static final LongUnaryOperator IDENTITY = a -> a;
 }

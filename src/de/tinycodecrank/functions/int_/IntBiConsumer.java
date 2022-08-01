@@ -21,4 +21,15 @@ public interface IntBiConsumer extends IntApplicableRight<IntConsumer>, IntAppli
 	{
 		return b -> apply(a, b);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	public static IntBiConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final IntBiConsumer SINK = (a, b) ->
+	{};
 }

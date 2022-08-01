@@ -1,5 +1,7 @@
 package de.tinycodecrank.functions.void_;
 
+import java.util.function.BiConsumer;
+
 import de.tinycodecrank.functions.applicable.ApplicableLeft;
 import de.tinycodecrank.functions.applicable.ApplicableRight;
 
@@ -17,4 +19,16 @@ public interface BiConsumer_<T, U> extends java.util.function.BiConsumer<T, U>, 
 	{
 		return u -> accept(t, u);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T, U> BiConsumer_<T, U> sink()
+	{
+		return (BiConsumer_<T, U>) SINK;
+	}
+	
+	static final BiConsumer<?, ?> SINK = (t, u) ->
+	{};
 }

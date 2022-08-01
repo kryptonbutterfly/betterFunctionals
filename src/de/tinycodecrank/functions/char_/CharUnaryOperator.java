@@ -19,4 +19,14 @@ public interface CharUnaryOperator extends CharApplicableLeft<CharSupplier>, Cha
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	public static CharUnaryOperator identity()
+	{
+		return IDENTITY;
+	}
+	
+	static final CharUnaryOperator IDENTITY = a -> a;
 }

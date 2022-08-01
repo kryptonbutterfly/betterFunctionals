@@ -38,4 +38,16 @@ public interface IntMultiConsumer<T> extends IntApplicableLeft<MultiConsumer<T>>
 	{
 		return t -> accept(value, t);
 	}
+	
+	/**
+	 * @return a Function that accepts arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> IntMultiConsumer<T> sink()
+	{
+		return (IntMultiConsumer<T>) SINK;
+	}
+	
+	static final IntMultiConsumer<?> SINK = (a, b) ->
+	{};
 }

@@ -19,4 +19,15 @@ public interface ByteConsumer extends ByteApplicableLeft<Runnable>, ByteApplicab
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that accepts an argument and does nothing
+	 */
+	public static ByteConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final ByteConsumer SINK = a ->
+	{};
 }

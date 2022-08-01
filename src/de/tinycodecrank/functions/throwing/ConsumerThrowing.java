@@ -42,4 +42,16 @@ public interface ConsumerThrowing<T, E extends Throwable> extends ApplicableRigh
 	{
 		return aptLast(t);
 	}
+	
+	/**
+	 * @return a Function that accepts an argument and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T, E extends Throwable> ConsumerThrowing<T, E> sink()
+	{
+		return (ConsumerThrowing<T, E>) SINK;
+	}
+	
+	static final ConsumerThrowing<?, ?> SINK = a ->
+	{};
 }

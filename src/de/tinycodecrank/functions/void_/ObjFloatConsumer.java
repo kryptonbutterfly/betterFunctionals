@@ -20,4 +20,16 @@ public interface ObjFloatConsumer<A> extends ApplicableLeft<A, FloatConsumer>, F
 	{
 		return a -> accept(a, b);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> ObjFloatConsumer<T> sink()
+	{
+		return (ObjFloatConsumer<T>) SINK;
+	}
+	
+	static final ObjFloatConsumer<?> SINK = (a, b) ->
+	{};
 }

@@ -19,4 +19,15 @@ public interface CharConsumer extends CharApplicableRight<Runnable>, CharApplica
 	{
 		return () -> accept(z);
 	}
+	
+	/**
+	 * @return a Function that accepts an argument and does nothing
+	 */
+	public static CharConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final CharConsumer SINK = a ->
+	{};
 }

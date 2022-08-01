@@ -19,4 +19,15 @@ public interface DoubleConsumer extends DoubleApplicableLeft<Runnable>, DoubleAp
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that accepts an arguments and does nothing
+	 */
+	public static DoubleConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final DoubleConsumer SINK = a ->
+	{};
 }

@@ -20,4 +20,16 @@ public interface ObjCharConsumer<A> extends ApplicableLeft<A, CharConsumer>, Cha
 	{
 		return a -> accept(a, b);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> ObjCharConsumer<T> sink()
+	{
+		return (ObjCharConsumer<T>) SINK;
+	}
+	
+	static final ObjCharConsumer<?> SINK = (a, b) ->
+	{};
 }

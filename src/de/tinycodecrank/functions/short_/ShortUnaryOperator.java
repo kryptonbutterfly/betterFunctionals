@@ -19,4 +19,14 @@ public interface ShortUnaryOperator extends ShortApplicableLeft<ShortSupplier>, 
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	public static ShortUnaryOperator identity()
+	{
+		return IDENTITY;
+	}
+	
+	static final ShortUnaryOperator IDENTITY = a -> a;
 }

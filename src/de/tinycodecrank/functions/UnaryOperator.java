@@ -19,4 +19,15 @@ public interface UnaryOperator<T> extends ApplicableLeft<T, Runnable>, Applicabl
 	{
 		return () -> apply(t);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> UnaryOperator<T> identity()
+	{
+		return (UnaryOperator<T>) IDENTITY;
+	}
+	
+	static final UnaryOperator<?> IDENTITY = a -> a;
 }

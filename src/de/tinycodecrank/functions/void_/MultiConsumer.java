@@ -10,7 +10,7 @@ import de.tinycodecrank.functions.applicable.ApplicableRight;
 public interface MultiConsumer<T> extends ApplicableRight<T, MultiConsumer<T>>, ApplicableLeft<T, MultiConsumer<T>>
 {
 	void accept(@SuppressWarnings("unchecked") T... t);
-
+	
 	default MultiConsumer<T> andThen(MultiConsumer<? super T> after)
 	{
 		Objects.requireNonNull(after);
@@ -20,7 +20,7 @@ public interface MultiConsumer<T> extends ApplicableRight<T, MultiConsumer<T>>, 
 			after.accept(t);
 		};
 	}
-
+	
 	@Override
 	default MultiConsumer<T> aptLast(T t)
 	{
@@ -43,4 +43,16 @@ public interface MultiConsumer<T> extends ApplicableRight<T, MultiConsumer<T>>, 
 			this.accept(at);
 		};
 	}
+	
+	/**
+	 * @return a Function that accepts arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> MultiConsumer<T> sink()
+	{
+		return (MultiConsumer<T>) SINK;
+	}
+	
+	static final MultiConsumer<?> SINK = (t) ->
+	{};
 }

@@ -19,4 +19,15 @@ public interface LongConsumer extends LongApplicableLeft<Runnable>, LongApplicab
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that accepts an argument and does nothing
+	 */
+	public static LongConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final LongConsumer SINK = a ->
+	{};
 }

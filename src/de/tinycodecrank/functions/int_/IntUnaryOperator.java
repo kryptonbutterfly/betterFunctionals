@@ -21,4 +21,14 @@ public interface IntUnaryOperator extends IntApplicableLeft<IntSupplier>, IntApp
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	public static IntUnaryOperator identity()
+	{
+		return IDENTITY;
+	}
+	
+	static final IntUnaryOperator IDENTITY = a -> a;
 }

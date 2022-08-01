@@ -19,4 +19,15 @@ public interface ShortBiConsumer extends ShortApplicableLeft<ShortConsumer>, Sho
 	{
 		return a -> accept(a, z);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	public static ShortBiConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final ShortBiConsumer SINK = (a, b) ->
+	{};
 }

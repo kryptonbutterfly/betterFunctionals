@@ -20,4 +20,16 @@ public interface ObjBoolConsumer<A> extends ApplicableLeft<A, BoolConsumer>, Boo
 	{
 		return a -> accept(a, b);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> ObjBoolConsumer<T> sink()
+	{
+		return (ObjBoolConsumer<T>) SINK;
+	}
+	
+	static final ObjBoolConsumer<?> SINK = (a, b) ->
+	{};
 }

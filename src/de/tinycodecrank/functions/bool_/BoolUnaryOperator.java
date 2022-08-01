@@ -23,9 +23,12 @@ public interface BoolUnaryOperator extends BoolApplicableRight<BooleanSupplier>,
 		return b -> after.apply(apply(b));
 	}
 	
-	static BoolUnaryOperator identity()
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	public static BoolUnaryOperator identity()
 	{
-		return b -> b;
+		return IDENTITY;
 	}
 	
 	@Override
@@ -39,4 +42,6 @@ public interface BoolUnaryOperator extends BoolApplicableRight<BooleanSupplier>,
 	{
 		return () -> apply(b);
 	}
+	
+	static final BoolUnaryOperator IDENTITY = a -> a;
 }

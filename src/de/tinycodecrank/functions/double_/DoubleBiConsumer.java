@@ -19,4 +19,15 @@ public interface DoubleBiConsumer extends DoubleApplicableLeft<DoubleConsumer>, 
 	{
 		return a -> accept(a, z);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	public static DoubleBiConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final DoubleBiConsumer SINK = (a, b) ->
+	{};
 }

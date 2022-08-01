@@ -19,4 +19,15 @@ public interface Function_<T, R> extends java.util.function.Function<T, R>, Appl
 	{
 		return () -> apply(t);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> Function_<T, T> identity()
+	{
+		return (Function_<T, T>) IDENTITY;
+	}
+	
+	static final Function_<?, ?> IDENTITY = a -> a;
 }

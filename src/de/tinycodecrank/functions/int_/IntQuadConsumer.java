@@ -19,4 +19,15 @@ public interface IntQuadConsumer extends IntApplicableRight<IntTriConsumer>, Int
 	{
 		return (int a, int b, int c) -> apply(a, b, c, d);
 	}
+	
+	/**
+	 * @return a Function that accepts four arguments and does nothing
+	 */
+	public static IntQuadConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final IntQuadConsumer SINK = (a, b, c, d) ->
+	{};
 }

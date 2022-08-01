@@ -39,4 +39,14 @@ public interface FloatUnaryOperator extends FloatApplicableLeft<FloatSupplier>, 
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	public static FloatUnaryOperator identity()
+	{
+		return IDENTITY;
+	}
+	
+	static final FloatUnaryOperator IDENTITY = a -> a;
 }

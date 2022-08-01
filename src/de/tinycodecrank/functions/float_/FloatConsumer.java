@@ -19,4 +19,15 @@ public interface FloatConsumer extends FloatApplicableLeft<Runnable>, FloatAppli
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that accepts an argument and does nothing
+	 */
+	public static FloatConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final FloatConsumer SINK = a ->
+	{};
 }

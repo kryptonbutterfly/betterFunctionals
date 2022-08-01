@@ -19,4 +19,16 @@ public interface BiConsumerThrowing<U, V, E extends Throwable> extends Applicabl
 	{
 		return v -> accept(u, v);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <U, V, E extends Throwable> BiConsumerThrowing<U, V, E> sink()
+	{
+		return (BiConsumerThrowing<U, V, E>) SINK;
+	}
+	
+	static final BiConsumerThrowing<?, ?, ?> SINK = (a, b) ->
+	{};
 }

@@ -19,4 +19,15 @@ public interface BoolConsumer extends BoolApplicableRight<Runnable>, BoolApplica
 	{
 		return () -> accept(bool);
 	}
+	
+	/**
+	 * @return a Function that accepts an argument and does nothing
+	 */
+	public static BoolConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final BoolConsumer SINK = a ->
+	{};
 }

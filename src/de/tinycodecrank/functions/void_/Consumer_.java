@@ -17,4 +17,16 @@ public interface Consumer_<T> extends java.util.function.Consumer<T>, Applicable
 	{
 		return aptLast(t);
 	}
+	
+	/**
+	 * @return a Function that accepts an argument and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> Consumer_<T> sink()
+	{
+		return (Consumer_<T>) SINK;
+	}
+	
+	static final Consumer_<?> SINK = (t) ->
+	{};
 }

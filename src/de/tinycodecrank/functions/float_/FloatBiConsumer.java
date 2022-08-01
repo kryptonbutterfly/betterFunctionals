@@ -19,4 +19,15 @@ public interface FloatBiConsumer extends FloatApplicableLeft<FloatConsumer>, Flo
 	{
 		return a -> accept(a, z);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	public static FloatBiConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final FloatBiConsumer SINK = (a, b) ->
+	{};
 }

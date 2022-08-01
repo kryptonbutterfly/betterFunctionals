@@ -32,4 +32,15 @@ public interface MultiIntConsumer extends IntApplicableLeft<MultiIntConsumer>, I
 			this.accept(at);
 		};
 	}
+	
+	/**
+	 * @return a Function that accepts arguments and does nothing
+	 */
+	public static MultiIntConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final MultiIntConsumer SINK = a ->
+	{};
 }

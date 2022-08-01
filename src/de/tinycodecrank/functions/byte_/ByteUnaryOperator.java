@@ -19,4 +19,14 @@ public interface ByteUnaryOperator extends ByteApplicableLeft<ByteSupplier>, Byt
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	public static ByteUnaryOperator identity()
+	{
+		return IDENTITY;
+	}
+	
+	static final ByteUnaryOperator IDENTITY = a -> a;
 }

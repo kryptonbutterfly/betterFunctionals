@@ -20,4 +20,16 @@ public interface ObjShortConsumer<A> extends ApplicableLeft<A, ShortConsumer>, S
 	{
 		return a -> accept(a, b);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T> ObjShortConsumer<T> sink()
+	{
+		return (ObjShortConsumer<T>) SINK;
+	}
+	
+	static final ObjShortConsumer<?> SINK = (a, b) ->
+	{};
 }

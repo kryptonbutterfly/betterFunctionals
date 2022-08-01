@@ -21,4 +21,14 @@ public interface DoubleUnaryOperator extends DoubleApplicableLeft<DoubleSupplier
 	{
 		return () -> apply(z);
 	}
+	
+	/**
+	 * @return a Function that returns the supplied value
+	 */
+	public static DoubleUnaryOperator identity()
+	{
+		return IDENTITY;
+	}
+	
+	static final DoubleUnaryOperator IDENTITY = a -> a;
 }

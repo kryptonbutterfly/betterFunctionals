@@ -19,4 +19,15 @@ public interface CharBiConsumer extends CharApplicableLeft<CharConsumer>, CharAp
 	{
 		return a -> accept(a, z);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	public static CharBiConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final CharBiConsumer SINK = (a, b) ->
+	{};
 }

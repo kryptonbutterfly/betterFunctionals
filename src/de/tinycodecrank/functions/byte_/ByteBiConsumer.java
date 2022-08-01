@@ -19,4 +19,15 @@ public interface ByteBiConsumer extends ByteApplicableLeft<ByteConsumer>, ByteAp
 	{
 		return a -> accept(a, z);
 	}
+	
+	/**
+	 * @return a Function that accepts two arguments and does nothing
+	 */
+	public static ByteBiConsumer sink()
+	{
+		return SINK;
+	}
+	
+	static final ByteBiConsumer SINK = (a, b) ->
+	{};
 }

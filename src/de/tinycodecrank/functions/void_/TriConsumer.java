@@ -19,4 +19,16 @@ public interface TriConsumer<T, U, V> extends ApplicableRight<V, BiConsumer_<T, 
 	{
 		return (u, v) -> accept(t, u, v);
 	}
+	
+	/**
+	 * @return a Function that accepts three arguments and does nothing
+	 */
+	@SuppressWarnings("unchecked")
+	public static <T, U, V> TriConsumer<T, U, V> sink()
+	{
+		return (TriConsumer<T, U, V>) SINK;
+	}
+	
+	static final TriConsumer<?, ?, ?> SINK = (a, b, c) ->
+	{};
 }
