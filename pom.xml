@@ -3,7 +3,7 @@
 	<groupId>de.tinycodecrank</groupId>
 	<artifactId>better_functionals</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>betterFunctions</name>
+	<name>better_functionals</name>
 	<description>more @FunctionalInterfaces with some helpful extras</description>
 
 	<distributionManagement>
