@@ -8,7 +8,7 @@
 
 	<distributionManagement>
 		<repository>
-			<id>github_better_functionals</id>
+			<id>github</id>
 			<name>GitHub tinycodecrank Apache Maven Packages</name>
 			<url>https://maven.pkg.github.com/tinycodecrank/betterFunctionals</url>
 		</repository>
