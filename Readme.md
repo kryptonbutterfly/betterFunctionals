@@ -28,5 +28,3 @@ Output:
 ```shell
 2
 ```
-
-TODO finish description
