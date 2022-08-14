@@ -2,14 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.tinycodecrank</groupId>
 	<artifactId>better_functionals</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>better_functionals</name>
 	<description>more @FunctionalInterfaces with some helpful extras</description>
 
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>GitHub tinycorecrank Apache Maven Packages</name>
+			<name>GitHub tinycodecrank Apache Maven Packages</name>
 			<url>https://maven.pkg.github.com/tinycodecrank/betterFunctionals</url>
 		</repository>
 	</distributionManagement>
