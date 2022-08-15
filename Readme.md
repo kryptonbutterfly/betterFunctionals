@@ -1,4 +1,4 @@
-# moreFunctionals
+# betterFunctionals
 more @FunctionalInterfaces with some helpful extras
 
 ## Extra: Partial function application
