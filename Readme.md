@@ -1,4 +1,4 @@
-# betterFunctionals
+# betterFunctionals [![Maven Package](https://github.com/tinycodecrank/betterFunctionals/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/tinycodecrank/betterFunctionals/actions/workflows/maven-publish.yml)
 more @FunctionalInterfaces with some helpful extras
 
 ## Extra: Partial function application
