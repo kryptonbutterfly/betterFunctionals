@@ -2,15 +2,15 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.tinycodecrank</groupId>
 	<artifactId>better_functionals</artifactId>
-	<version>1.0.0</version>
+	<version>2.0.0</version>
 	<name>better_functionals</name>
 	<description>more @FunctionalInterfaces with some helpful extras</description>
 
 	<distributionManagement>
 		<repository>
-			<id>github_better_functionals</id>
+			<id>github</id>
 			<name>GitHub tinycodecrank Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/tinycodecrank/betterFunctionals</url>
+			<url>https://maven.pkg.github.com/tinycodecrank/maven-repo</url>
 		</repository>
 	</distributionManagement>
 
@@ -19,6 +19,13 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>18</java.version>
 	</properties>
+	
+	<repositories>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/tinycodecrank/maven-repo</url>
+		</repository>
+	</repositories>
 	
 	<dependencies></dependencies>
 
