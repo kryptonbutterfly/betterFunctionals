@@ -1,23 +1,23 @@
-module de.tinycodecrank.Functional
+module kryptonbutterfly.Functional
 {
-	exports de.tinycodecrank.functions.float_.applicable;
-	exports de.tinycodecrank.functions.char_.applicable;
-	exports de.tinycodecrank.functions.byte_.applicable;
-	exports de.tinycodecrank.functions.short_;
-	exports de.tinycodecrank.functions.void_;
-	exports de.tinycodecrank.functions.long_.applicable;
-	exports de.tinycodecrank.functions.bool_;
-	exports de.tinycodecrank.functions.int_;
-	exports de.tinycodecrank.functions.short_.applicable;
-	exports de.tinycodecrank.functions.long_;
-	exports de.tinycodecrank.functions;
-	exports de.tinycodecrank.functions.byte_;
-	exports de.tinycodecrank.functions.int_.applicable;
-	exports de.tinycodecrank.functions.applicable;
-	exports de.tinycodecrank.functions.bool_.applicable;
-	exports de.tinycodecrank.functions.double_.applicable;
-	exports de.tinycodecrank.functions.throwing;
-	exports de.tinycodecrank.functions.char_;
-	exports de.tinycodecrank.functions.double_;
-	exports de.tinycodecrank.functions.float_;
+	exports kryptonbutterfly.functions;
+	exports kryptonbutterfly.functions.applicable;
+	exports kryptonbutterfly.functions.bool_;
+	exports kryptonbutterfly.functions.bool_.applicable;
+	exports kryptonbutterfly.functions.byte_;
+	exports kryptonbutterfly.functions.byte_.applicable;
+	exports kryptonbutterfly.functions.char_;
+	exports kryptonbutterfly.functions.char_.applicable;
+	exports kryptonbutterfly.functions.double_;
+	exports kryptonbutterfly.functions.double_.applicable;
+	exports kryptonbutterfly.functions.float_;
+	exports kryptonbutterfly.functions.float_.applicable;
+	exports kryptonbutterfly.functions.int_;
+	exports kryptonbutterfly.functions.int_.applicable;
+	exports kryptonbutterfly.functions.long_;
+	exports kryptonbutterfly.functions.long_.applicable;
+	exports kryptonbutterfly.functions.short_;
+	exports kryptonbutterfly.functions.short_.applicable;
+	exports kryptonbutterfly.functions.throwing;
+	exports kryptonbutterfly.functions.void_;
 }

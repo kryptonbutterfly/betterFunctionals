@@ -1,4 +1,4 @@
-# betterFunctionals [![Maven Package](https://github.com/tinycodecrank/betterFunctionals/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/tinycodecrank/betterFunctionals/actions/workflows/maven-publish.yml)
+# betterFunctionals [![Maven Package](https://github.com/kryptonbutterfly/betterFunctionals/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/kryptonbutterfly/betterFunctionals/actions/workflows/maven-publish.yml)
 more @FunctionalInterfaces with some helpful extras
 
 ## Extra: Partial function application
@@ -34,13 +34,13 @@ Output:
 ```xml
 <repository>
   <id>github</id>
-  <url>https://maven.pkg.github.com/tinycodecrank/maven-repo</url>
+  <url>https://maven.pkg.github.com/kryptonbutterfly/maven-repo</url>
 </repository>
 ```
 
 ```xml
 <dependency>
-  <groupId>de.tinycodecrank</groupId>
+  <groupId>kryptonbutterfly</groupId>
   <artifactId>better_functionals</artifactId>
   <version>2.0.0</version>
 </dependency>
@@ -50,5 +50,5 @@ Output:
 
 java version | library version | Download
 :----------: | :-------------: | :-------
-18+          | 2.0.0           | [better_functionals-2.0.0.jar](https://github-registry-files.githubusercontent.com/731108692/d2e15600-99d9-11ee-82c2-57c206357a76?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20231228%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20231228T142508Z&X-Amz-Expires=300&X-Amz-Signature=d794a0fc3d321c45b883331666b086649db783bec2fee614588a53b53eae694a&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=731108692&response-content-disposition=filename%3Dbetter_functionals-2.0.0.jar&response-content-type=application%2Foctet-stream)
-18+          | 1.0.0           | [BetterFunctionals.jar](https://github.com/tinycodecrank/betterFunctionals/releases/download/v1.0.0/BetterFunctionals.jar)
+18+          | 2.0.0           | [better_functionals-2.0.0.jar](https://github-registry-files.githubusercontent.com/731108692/d2e15600-99d9-11ee-82c2-57c206357a76?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240118%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240118T200503Z&X-Amz-Expires=300&X-Amz-Signature=5086b305e605cb68e559fb3be4d34f2957394256f545538359b0c364e7db5ee5&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=731108692&response-content-disposition=filename%3Dbetter_functionals-2.0.0.jar&response-content-type=application%2Foctet-stream)
+18+          | 1.0.0           | [BetterFunctionals.jar](https://github.com/kryptonbutterfly/betterFunctionals/releases/download/v1.0.0/BetterFunctionals.jar)
